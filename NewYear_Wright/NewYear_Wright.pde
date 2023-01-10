@@ -33,7 +33,7 @@ void setup()
    frameRate(60);
    
    startButton =  loadImage("StartButton.png");
-   image(startButton, 980,620);  
+   image(startButton, 860,550);  
  
    
    wright = new WrightSetting();
@@ -58,7 +58,7 @@ void draw()
 
 void mousePressed()
 {
-   if(mouseX > width - 100 && mouseY > height - 50)
+   if(mouseX > width - 150 && mouseY > height - 70)
    {
      clickChecker = true;
      wright = new WrightSetting(savePosition);
