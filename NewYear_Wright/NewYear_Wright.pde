@@ -2,10 +2,10 @@
 ArrayList<PVector> savePosition = new ArrayList<PVector>();
 Boolean clickChecker = false;
 
-PImage button;
+PImage startButton;
 
 //文字の太さを変えられる
-public float thickness = 5;
+public float thickness = 15;
 int inputSaveDate;
 
 class WrightSetting
@@ -26,14 +26,14 @@ WrightSetting wright;
 
 void setup()
 {
-   size(1200,500);
+   size(1100,700);
    background(255);
    noStroke();
    fill(0);
    frameRate(60);
    
-   button =  loadImage("");
-   image(button , 1200,500);
+   startButton =  loadImage("StartButton.png");
+   image(startButton, 980,620);  
  
    
    wright = new WrightSetting();
@@ -58,7 +58,7 @@ void draw()
 
 void mousePressed()
 {
-   if(mouseX > width - 31 && mouseY > height - 31)
+   if(mouseX > width - 100 && mouseY > height - 50)
    {
      clickChecker = true;
      wright = new WrightSetting(savePosition);
